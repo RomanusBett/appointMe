@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LucideAngularModule, Search} from 'lucide-angular';
 
 @Component({
   selector: 'app-input',
-  imports: [CommonModule],
+  imports: [CommonModule, LucideAngularModule],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.css',
+  styles: ``,
   standalone: true,
 })
 export class InputComponent {
@@ -15,4 +16,6 @@ export class InputComponent {
   ariaInvalid: boolean = false;
   isDisabled: boolean = false;
   customClass: string = '';
+
+  readonly Search = Search;
 }

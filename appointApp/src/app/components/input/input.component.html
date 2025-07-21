@@ -1,11 +1,15 @@
-<input
-    [placeholder]="placeholder"
-    [name]="name"
-    [ngClass]="[
+
+    <lucide-angular [img]="Search" class="
+                    absolute
+                    left-3
+                    top-1/2 transfor
+                    -translate-y-1/2 
+                    text-[var(--muted-foreground)] 
+                    w-4 h-4">
+    </lucide-angular>
+    <input [placeholder]="placeholder" [name]="name" [ngClass]="[
     'file:text-[var(--foreground)]',
     'placeholder:text-[var(--muted-foreground)]',
-    'selection:bg-[var(--primary)]',
-    'selection:text-[var(--primary-foreground)]',
     'border-[var(--border)]',
     'bg-[var(--input-background)]',
     'flex',
@@ -17,5 +21,4 @@
     'py-1',
     'outline-none',
     'md:text-sm',
-  ]"
-/>
+  ]" />
