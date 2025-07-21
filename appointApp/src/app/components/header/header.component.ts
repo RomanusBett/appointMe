@@ -7,7 +7,7 @@ import { ButtonComponent } from '../button/button.component';
   selector: 'app-header',
   imports: [LucideAngularModule, InputComponent, ButtonComponent],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styles: ``,
 })
 export class HeaderComponent {
   readonly Search = Search;

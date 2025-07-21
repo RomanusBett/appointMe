@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-button',
   imports: [LucideAngularModule, CommonModule],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css'
+  styles:  ``,
 })
 export class ButtonComponent {
   @Input() variant: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' = 'default';
