@@ -1,0 +1,65 @@
+<header class="border-b border-b-[var(--switch-background)] bg-white sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center ">
+                    <lucide-angular [img]="Heart" class="w-5 h-5 text-white "></lucide-angular>
+                </div>
+                <span class="text-x1 font-semibold text-[var(--primary)]">Medicare</span>
+            </div>
+
+            <div class="hidden md:flex items-center flex-1 max-w-md mx-8">
+                <div class="relative
+                w-full 
+                flex border 
+                border-[var(--input-background)]
+                bg-[var(--input-background)] 
+                rounded-md
+                ">
+                    <lucide-angular [img]="Search" class="
+                    absolute
+                    left-3
+                    top-1/2 transfor
+                    -translate-y-1/2 
+                    text-[var(--muted-foreground)] 
+                    w-4 h-4">
+                    </lucide-angular>
+                    <app-input class="pl-10 bg-[var(--input-background)] w-full"
+                        placeholder="search doctors, specialties...">
+                    </app-input>
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-6">
+                <a href="#" class="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">
+                    Find Doctors
+                </a>
+                <a href="#" class="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">
+                    Specialties
+                </a>
+                <a href="#" class="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">
+                    About
+                </a>
+                <a href="#" class="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">
+                    Contact
+                </a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <app-button variant="ghost" size="icon" class="lg:hidden">
+                    <lucide-angular [img]="Search" class="w-5 h-5" />
+                </app-button>
+                <app-button variant="outline" class="hidden sm:flex items-center space-x-2">
+                    <lucide-angular [img]="Calendar" class=" text-black w-4 h-4" />
+                    <span>Book Now</span>
+                </app-button>
+
+                <app-button variant="ghost" size="icon">
+                    <lucide-angular [img]="User" class="w-5 h-5" />
+                </app-button>
+                <app-button variant="ghost" size="icon" class="lg:hidden">
+                    <lucide-angular [img]="Menu" class="w-5 h-5" />
+                </app-button>
+            </div>
+        </div>
+    </div>
+</header>

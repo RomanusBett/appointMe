@@ -1,0 +1,19 @@
+<button
+  [attr.type]="type"
+  [ngClass]="[
+    'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 outline-none',
+    variant === 'default' ? 'bg-[var(--primary)] text-[var(--primary-foreground)] hover:bg-[var(--primary)/90]' : '',
+    variant === 'destructive' ? 'bg-[var(--destructive)] text-white hover:bg-[var(--destructive)/90] dark:bg-[var(--destructive)/60]' : '',
+    variant === 'outline' ? 'border bg-[var(--background)] text-[var(--foreground)] hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)] border-[var(--switch-background)]' : '',
+    variant === 'secondary' ? 'bg-[var(--secondary)] text-[var(--secondary-foreground)] hover:bg-[var(--secondary)/80]' : '',
+    variant === 'ghost' ? 'hover:bg-[var(--accent)] hover:text-[var(--accent-foreground)] ' : '',
+    variant === 'link' ? 'text-[var(--primary)] underline-offset-4 hover:underline' : '',
+    size === 'default' ? 'h-9 px-4 py-2' : '',
+    size === 'sm' ? 'h-8 rounded-md px-3 gap-1.5' : '',
+    size === 'lg' ? 'h-10 rounded-md px-6' : '',
+    size === 'icon' ? 'size-9 rounded-md' : '',
+    class
+  ]"
+>
+  <ng-content></ng-content>
+</button>

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --font-size: 14px;
+  --background: #fff;
+  --foreground: #3b3b3b;
+  --card: #fff;
+  --card-foreground: #3b3b3b;
+  --popover: #ffffff;
+  --popover-foreground: #3b3b3b;
+  --primary: #030213;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f0ff;
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #fff;
+  --border: #0000001a;
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #b5b5b5; 
+  --chart-1: #da843b;
+  --chart-2: #5e9fd4;
+  --chart-3: #8693e0;
+  --chart-4: #e98b48;
+  --chart-5: #ea8741;
+  --radius: 0.625rem;
+  --sidebar: #fdfdfd;
+  --sidebar-foreground: #3b3b3b;
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: #fdfdfd;
+  --sidebar-accent: #fafafa;
+  --sidebar-accent-foreground: #444444;
+  --sidebar-border: #ebebeb;
+  --sidebar-ring: #b5b5b5;
+}
