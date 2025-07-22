@@ -1,0 +1,23 @@
+<div
+    class="bg-[var(--card)] text-[var(--card-foreground)] flex flex-x-col gap-6 rounded-xl hover:shadow-lg transition-shadow cursor-pointer border-0 shadow-sm">
+    <div class="[&:last-child]:pb-6 p-6 text-center mx-auto">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            [ngClass]="[name() === 'Heart' ? 'bg-red-100 text-red-600' : '',
+                        name() === 'Brain' ? 'bg-purple-100 text-purple-600' : '',
+                        name() === 'Smile' ? 'bg-blue-100 text-blue-600' : '',
+                        name() === 'Eye' ? 'bg-green-100 text-green-600' : '',
+                        name() === 'Baby' ? 'bg-pink-100 text-pink-600' : '',
+                        name() === 'Bone' ? 'bg-orange-100 text-orange-600' : '',
+                        name() === 'Stethoscope' ? 'bg-teal-100 text-teal-600' : '',
+                        name() === 'Sparkles' ? 'bg-yellow-100 text-yellow-600' : '',
+             ]"
+        >
+            <lucide-angular [img]="icons[name()]" class="w-8 h-8"></lucide-angular>
+        </div>
+        <h3 class="mb-2">{{title()}}</h3>
+        <p class="text-sm text-[var(--muted-foreground)] mb-3">{{content()}}</p>
+        <div class="text-sm">
+            <span class="text-[var(--primary)]">{{doctors()}} Doctors</span>
+        </div>
+    </div>
+</div>
