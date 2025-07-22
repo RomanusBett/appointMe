@@ -7,15 +7,13 @@
                 <div class="bg-white rounded-2xl shadow-lg p-6 mb-12">
                     <div class="flex justify-between">
                         <div class="relative
-                w-[calc(25%)]
-                flex border 
-                border-[var(--input-background)]
-                bg-[var(--input-background)] 
-                rounded-md
-                ">
-                            <app-input placeholder="Doctor's name" class="pl-10">
-
-                            </app-input>
+                            w-[calc(25%)]
+                            flex border 
+                            border-[var(--input-background)]
+                            bg-[var(--input-background)] 
+                            rounded-md
+                        ">
+                            <app-input placeholder="Doctor's name" class="pl-10"></app-input>
                         </div>
                         <div>
                             <p>Location</p>
@@ -27,29 +25,17 @@
                 </div>
                 <div class="grid md:grid-cols-3 sm:grid-cols-1  gap-8">
                     <div class="text-center">
-                        <div class="text-3xl mb-2">
-                            500+
-                        </div>
-                        <p class="text-[var(--muted-foreground)]">
-                            Verified Doctors
-                        </p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl mb-2">
-                                50+
-                            </div>
-                            <p class="text-[var(--muted-foreground)]">
-                                Specialties
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl mb-2">
-                                10k+
-                            </div>
-                            <p class="text-[var(--muted-foreground)]">
-                                Happy Patients
-                            </p>
-                        </div>
+                        <div class="text-3xl mb-2">500+</div>
+                        <p class="text-[var(--muted-foreground)]">Verified Doctors</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">50+</div>
+                        <p class="text-[var(--muted-foreground)]">Specialties</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">10k+</div>
+                        <p class="text-[var(--muted-foreground)]">Happy Patients</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,16 +45,13 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="text-3xl lg:text-4xl mb-4">Browse by Specialty</h2>
-            <p class="text-xl text-[var(--muted-foreground)] mx-auto max-w-2xl">Find the right specialist for your healthcare needs from our comprehensive range of medical specialties</p>
+            <p class="text-xl text-[var(--muted-foreground)] mx-auto max-w-2xl">Find the right specialist for your
+                healthcare needs from our comprehensive range of medical specialties</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @for(s of specialties; track s.id){
-                <app-specialties 
-                    [name]="s.name"
-                    [title]="s.title"
-                    [content]="s.content"
-                    [doctors]="s.doctors"
-                ></app-specialties>              
+            <app-specialties [name]="s.name" [title]="s.title" [content]="s.content"
+                [doctors]="s.doctors"></app-specialties>
             }
         </div>
     </div>
@@ -78,6 +61,26 @@
         <div class="text-center mb-12">
             <h2 class="text-3xl lg:text-4xl mb-4">Featured Doctors</h2>
             <p class="text-xl text-[var(--muted-foreground)] mx-auto max-w-2xl">Meet our top-rated healthcare professionals who are ready to provide you with exceptional medical care.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @for (doc of doctors; track doc.id){
+                <app-card-doctors
+                [id]="doc.id"
+                [name]="doc.name"
+                [specialty]="doc.specialty"
+                [rating]="doc.rating"
+                [reviewcount]="doc.reviewCount"
+                [location]="doc.location"
+                [consultationFee]="doc.consultationFee"
+                [nextAvailable]="doc.nextAvailable"
+                [image]="doc.image"
+                [languages]="doc.languages"
+                [approved]="doc.verified"
+                ></app-card-doctors>
+            }
+        </div>
+        <div class="text-center mt-12">
+            <app-button variant="default" >View all Doctors</app-button>
         </div>
     </div>
 </section>

@@ -1,0 +1,80 @@
+<div
+    key="id()"
+    class="bg-[var(--card)] text-[var(--card-foreground)] flex flex-col gap-6 rounded-xl hover:shadow-lg transition-shadow border-0 shadow-sm">
+    <div class="[last-child]:pb-6 p-6">
+        <div class="flex items-start space-x-4 mb-4">
+            <div class="relative">
+                <img class="h-16 w-16 object-cover rounded-full"
+                    [src]='image()'
+                    alt="doc">
+                <div
+                    class="absolute -bottom-1 -right-1 bg-green-500 w-6 h-6 flex items-center justify-center rounded-full">
+                    <span class="text-white text-xs cursor-default">✓</span>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-start justify-between w-full">
+                    <div>
+                        <h3 class="mb-1">{{name()}}</h3>
+                        <p class="text-[var(--muted-foreground)] text-sm mb-2">{{specialty()}}</p>
+                        <div class="flex items-center space-x-3 text-sm mb-2">
+                            <div class="text-sm text-[var(--muted-foreground)] flex items-center">
+                                <lucide-angular [img]="Star"
+                                    class="w-4 h-4 text-yellow-400 fill-current mr-1"></lucide-angular>
+                                <span class="ml-1">{{rating()}}</span>
+                                <span>({{reviewcount()}})</span>
+                            </div>
+                            <div class="text-sm text-[var(--muted-foreground)] flex items-center">
+                                <lucide-angular [img]="Clock" class="w-4 h-4"></lucide-angular>
+                                <span class="ml-1">15 yrs</span>
+                            </div>
+                        </div>
+                        <div class="text-[var(--muted-foreground)] text-sm flex items-center mb-3">
+                            <lucide-icon [img]="MapPin" class="h-4 w-4"></lucide-icon>
+                            <span class="ml-1">{{location()}}</span>
+                        </div>
+                    </div>
+                    <app-button variant="ghost" class="ml-2">
+                        <lucide-angular [img]="Heart" class="h-5 w-5 text-[var(--muted-foreground)]"></lucide-angular>
+                    </app-button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 mb-4">
+            @if(languages()){
+            @for(l of languages(); track l){
+            <span class="bg-[var(--input-background)] px-2 py-0.5 text-xs rounded-md text-[var(--primary)]">
+                {{l}}
+            </span>
+            }
+            }
+        </div>
+        <div class="flex justify-between items-center border-t border-[var(--switch-background)] pt-4">
+            <div class="text-sm">
+                <div class="text-[var(--muted-foreground)]">
+                    Consulation Fee
+                </div>
+                <div class="font-semibold">
+                    Ksh{{consultationFee()}}
+                </div>
+            </div>
+            <div class="text-sm">
+                <div class="text-[var(--muted-foreground)]">
+                    Next Available
+                </div>
+                <div class="text-green-600">
+                    {{nextAvailable() | date: 'shortTime'}}
+                </div>
+            </div>
+        </div>
+        <div class="flex mt-4 items-center justify-between">
+            <app-button variant="outline">
+                View Profile
+            </app-button>
+            <app-button variant="default">
+                <lucide-angular [img]="Calendar" class="h-5 w-5 text-white"></lucide-angular>
+                Book Now
+            </app-button>
+        </div>
+    </div>
+</div>

@@ -2,10 +2,13 @@ import { Component, input } from '@angular/core';
 import { InputComponent } from '../input/input.component';
 import { SpecialtiesComponent } from '../specialties/specialties.component';
 import { ourSpecialties } from '../../assets/specialties.data';
+import { CardDoctorsComponent } from '../card-doctors/card-doctors.component';
+import { docInfo } from '../../assets/docInfo.data';
+import { ButtonComponent } from "../button/button.component";
 
 @Component({
   selector: 'app-command-sec',
-  imports: [InputComponent, SpecialtiesComponent],
+  imports: [InputComponent, SpecialtiesComponent, CardDoctorsComponent, ButtonComponent],
   templateUrl: './command-sec.component.html',
   styles: ``
 })
@@ -14,4 +17,5 @@ export class CommandSecComponent {
   content = input<string>();
 
   specialties = ourSpecialties
+  doctors = docInfo
 }
