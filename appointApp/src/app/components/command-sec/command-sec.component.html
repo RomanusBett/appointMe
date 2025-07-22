@@ -1,5 +1,5 @@
 <section class="bg-[var(--color-indigo-100)] py-16 lg:py-24">
-    <div class="container mx-auto px-4 sm-px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-4xl mx-auto">
             <div class="mx-auto text-center">
                 <h1 class="text-4xl lg:text-6xl mb-6 text-gray-900"> {{title()}}</h1>
@@ -55,6 +55,29 @@
         </div>
     </div>
 </section>
-<section>
-
+<section class="py-16 lg:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl lg:text-4xl mb-4">Browse by Specialty</h2>
+            <p class="text-xl text-[var(--muted-foreground)] mx-auto max-w-2xl">Find the right specialist for your healthcare needs from our comprehensive range of medical specialties</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            @for(s of specialties; track s.id){
+                <app-specialties 
+                    [name]="s.name"
+                    [title]="s.title"
+                    [content]="s.content"
+                    [doctors]="s.doctors"
+                ></app-specialties>              
+            }
+        </div>
+    </div>
+</section>
+<section class="py-16 lg:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl lg:text-4xl mb-4">Featured Doctors</h2>
+            <p class="text-xl text-[var(--muted-foreground)] mx-auto max-w-2xl">Meet our top-rated healthcare professionals who are ready to provide you with exceptional medical care.</p>
+        </div>
+    </div>
 </section>
