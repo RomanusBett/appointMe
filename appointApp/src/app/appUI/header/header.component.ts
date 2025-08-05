@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule, Search, Menu, User, Heart, Calendar } from 'lucide-angular';
-import { InputComponent } from '../input/input.component';
-import { ButtonComponent } from '../button/button.component';
+import { InputComponent } from '../../components/input/input.component';
+import { ButtonComponent } from '../../components/button/button.component';
 
 @Component({
   selector: 'app-header',

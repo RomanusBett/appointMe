@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { MenubarComponent } from '../../components/menubar/menubar.component';
-import { HomeSecComponent } from '../../components/home-sec/home-sec.component';
+import { HeaderComponent } from '../../appUI/header/header.component';
+import { MenubarComponent } from '../../appUI/menubar/menubar.component';
+import { HomeSecComponent } from '../../appUI/home-sec/home-sec.component';
 import { FooterComponent } from '../../appUI/footer/footer.component';
 
 @Component({

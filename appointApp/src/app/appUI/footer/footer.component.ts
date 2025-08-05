@@ -16,3 +16,4 @@ export class FooterComponent {
   email = 'support@medicare.com';
   currentYear: number = new Date().getFullYear();
 }
+ 
